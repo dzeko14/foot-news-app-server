@@ -3,7 +3,7 @@ package my.dzeko.SportsApi.utils
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 
-object NetworkUtils {
+object NewsParserNetworkUtils {
     private const val BASE_URL = "https://ua.tribuna.com"
     private const val FOOT_NEWS_URL = "/news/football"
 
@@ -18,4 +18,6 @@ object NetworkUtils {
     fun getOriginalUrl(resource: String): String {
         return BASE_URL + resource
     }
+
+
 }

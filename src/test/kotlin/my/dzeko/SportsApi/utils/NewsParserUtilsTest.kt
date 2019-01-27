@@ -1,12 +1,13 @@
 package my.dzeko.SportsApi.utils
 
-import org.junit.jupiter.api.Test
+import org.junit.Test
+
 
 internal class NewsParserUtilsTest {
 
     @Test
     fun parseNewsTitles() {
-       // NewsParserUtils.parseNews(NetworkUtils.getNewsTitleDocument())
+       // NewsParserUtils.parseNews(NewsParserNetworkUtils.getNewsTitleDocument())
         val a = "aaaaa"
         println(a.hashCode())
     }

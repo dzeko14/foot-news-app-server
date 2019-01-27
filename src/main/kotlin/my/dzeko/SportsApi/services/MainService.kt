@@ -9,6 +9,9 @@ class MainService(
 ){
 
     fun update(){
-        newsService.getNews()
+        val allNews = newsService.getNews()
+        if (allNews.isEmpty()) return
+        val news = newsService.removeAlreadySavedNewsInFirebase(allNews)
+        newsService.saveNews(news)
     }
 }

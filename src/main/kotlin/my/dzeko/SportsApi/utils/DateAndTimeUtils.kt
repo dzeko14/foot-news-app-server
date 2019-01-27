@@ -2,6 +2,9 @@ package my.dzeko.SportsApi.utils
 
 import java.lang.Exception
 import java.time.LocalDateTime
+import java.time.ZoneId
+import java.util.*
+
 object DateAndTimeUtils {
 
     fun getDateFromString(dateStr :String) : LocalDateTime {
@@ -36,5 +39,9 @@ object DateAndTimeUtils {
             withHour(hoursAndMinutes[0].toInt())
             withMinute(hoursAndMinutes[1].toInt())
         }
+    }
+
+    fun convertLocalDateTimeToDate(localDateTime: LocalDateTime) :Date {
+       return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant())
     }
 }

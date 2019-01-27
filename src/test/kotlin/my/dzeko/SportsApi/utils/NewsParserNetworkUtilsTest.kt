@@ -2,11 +2,11 @@ package my.dzeko.SportsApi.utils
 
 import org.junit.Test
 
-internal class NetworkUtilsTest {
+internal class NewsParserNetworkUtilsTest {
 
     @Test
     fun getNewsTitleDocument() {
-        val doc = NetworkUtils.getNewsTitleDocument()
+        val doc = NewsParserNetworkUtils.getNewsTitleDocument()
         val element = doc.body()
 
         println(element.html())

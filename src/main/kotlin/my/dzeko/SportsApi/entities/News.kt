@@ -1,13 +1,17 @@
 package my.dzeko.SportsApi.entities
 
-import java.time.LocalDateTime
+import java.util.*
 
 data class News(
-        val title :String,
-        val summary :String,
-        val date :LocalDateTime,
-        val tags :List<Tag>,
-        val content :String,
-        val originalUrl :String,
-        val id: Int = 0
-)
+        var title :String,
+        var summary :String,
+        var date :Date,
+        var tags :List<Tag>,
+        var content :String,
+        var originalUrl :String
+) {
+    companion object {
+        var lastUsedId :Long = 0
+        var lastAddedNews :News? = null
+    }
+}
